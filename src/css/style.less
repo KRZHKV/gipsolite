@@ -41,6 +41,14 @@ body {
 section {
 	padding: 10rem 0;
 }
+button, input, a {
+	&:focus {
+		outline: none;
+	}
+}
+a:hover {
+	text-decoration: none;
+}
 .button {
 	background-color: @btn;
 	color: @white;
@@ -49,6 +57,11 @@ section {
 	text-transform: uppercase;
 	border: none;
 	font-size: 1.2rem;
+	transition: all 0.2s;
+	&:hover {
+		background-color: darken(@btn, 5%);
+		cursor: pointer;
+	}
 }
 
 //colors
@@ -71,6 +84,7 @@ section {
 	&-content {
 		padding-top: 10rem;
 		h1 {
+			margin-top: 0rem;
 			margin-bottom: 4rem;
 			font-size: 4rem;
 			text-transform: uppercase;
@@ -168,5 +182,35 @@ section {
 		display: table-cell;
 		vertical-align: middle;
 		text-align: right;
+	}
+}
+
+
+@media (max-width: 991px) {
+	.phone-block {
+		display: block;
+		text-align: center;
+	}
+	.main {
+		background-position: bottom right;
+		&-content {
+			margin-top: 3rem;
+		}
+		&-title {
+			padding-bottom: 3rem;
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.main {
+		background-position: left;
+	}
+	.header {
+		text-align: center;
+	}
+	.wrap-block {
+		text-align: center;
 	}
 }
