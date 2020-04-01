@@ -64,10 +64,19 @@ a:hover {
 	}
 }
 .section-header {
+	&_light {
+		color: @white;
+		margin-top: 0;
+	}
 	text-align: center;
 	margin-bottom: 12rem;
-	.bold();
-	font-size: 3.6rem;
+	h2 {
+		.bold();
+		font-size: 3.6rem;
+	}
+	p {
+		font-size: 1.4rem;
+	}
 }
 .slick-active {
 	outline: none;
@@ -243,6 +252,62 @@ a:hover {
 	background-size: 65%;
 }
 
+.prices {
+	background: url(../img/prices/prices-bg.jpg) center ;
+	&-header-btn {
+	margin-top: 2.5rem;	
+	}
+	&-button {
+		text-align: right;
+	}
+	&-block {
+		min-height: 59rem;
+		background-color: @white;
+		text-align: center;
+		box-shadow: 7px 12px 21px 0px rgba(0,0,0, 0.17);
+		padding: 2rem 1rem;
+		h4 {
+			margin: 3rem 0;
+			font-size: 2rem;
+			.bold();
+		}
+		img {
+			display: inline-block;
+			margin-bottom: 2rem;
+			max-width: 25rem;
+		}
+		
+	}
+	&-list {
+		min-height: 18rem;
+		list-style: none;
+		line-height: 1.6;
+		padding: 0;
+		font-size: 1.6rem;
+		li {
+			&:before {
+				content: '';
+				margin-right: 1rem;
+				display: inline-block;
+				width: 1.4rem;
+				height: 1.4rem;
+				background: url(../img/dot.svg) no-repeat center;
+				background-size: 100%;
+				vertical-align: middle;
+			}
+		}
+	}
+	&-tag {
+		font-size: 1.9rem;
+		display: block;
+		margin-bottom: 2rem;
+		.bold();
+	}
+}
+
+
+
+
 .popup {
 	display: none;
 	position: fixed;
@@ -305,6 +370,22 @@ a:hover {
 			padding-bottom: 3rem;
 			text-align: center;
 		}
+	}
+	.prices {
+		&-block {
+			margin-top: 2rem;
+		}
+		&-button {
+			text-align: center;
+			padding: 2rem 0;
+		}
+		&-header-btn {
+			margin-top: 0;
+			margin-bottom: 2rem;
+		}
+	}
+	.section-header_light {
+		margin-bottom: 0;
 	}
 }
 
